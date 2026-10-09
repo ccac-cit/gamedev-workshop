@@ -11,8 +11,23 @@ function createAsteroid(window)
 end
 
 function createPoints()
-    local points = {{x = 0, y = 0}}
-        for i = 2, 6 do 
+    --local points = {{x = 0, y = 0}}
+    local points = {
+        {x = 0, y = 0},
+        {x = 30, y = 0},
+        {x = 30, y = 20},
+        {x = 25, y = 40},
+        {x = 20, y = 45},
+        {x = 15, y = 45},
+        {x = 12, y = 35},
+        {x = 5, y = 25},
+        {x = 0, y = 20},
+        {x = -10, y = 10},
+        {x = -15, y = 5},
+        {x = -20, y = 0},
+        {x = -30, y = 0}
+    }
+        --[[for i = 2, 6 do 
             points[i] = {x = points[i - 1].x + math.random(5, 25), y = points[i - 1].y + math.random(5, 25)}
         end
         for i = 7, 10 do 
@@ -20,7 +35,7 @@ function createPoints()
         end
         for i = 11, 13 do 
             points[i] = {x = points[i - 1].x - math.random(5, 25), y = points[i - 1].y + math.random(5, 25)}
-        end
+        end--]]
     return points
 end
 
